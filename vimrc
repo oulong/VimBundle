@@ -681,8 +681,8 @@ nmap <leader>il :IndentLinesToggle<CR>
  
 " 设置Gvim的对齐线样式
 if g:isGUI
-    let g:indentLine_char = "┊"
-    let g:indentLine_first_char = "┊"
+    let g:indentLine_char = "|"
+    let g:indentLine_first_char = "|"
 endif
  
 " 设置终端对齐线颜色，如果不喜欢可以将其注释掉采用默认颜色
