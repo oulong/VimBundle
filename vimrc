@@ -121,8 +121,9 @@ if g:islinux
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
 else
-    set rtp+=$VIM/vimfiles/bundle/vundle/
-    call vundle#rc('$VIM/vimfiles/bundle/')
+	set rtp+=~/vimfiles/bundle/Vundle.vim/
+	let path='~/vimfiles/bundle'
+	call vundle#begin(path)
 endif
  
 " 使用Vundle来管理插件，这个必须要有。
@@ -156,9 +157,8 @@ Plugin 'taglist.vim'
 Plugin 'TxtBrowser'
 Plugin 'ZoomWin'
 
-if g:islinux
-	call vundle#end()
-endif
+call vundle#end()
+
  
 " -----------------------------------------------------------------------------
 "  < 编码配置 >
@@ -179,6 +179,7 @@ if (g:iswindows && g:isGUI)
  
     "解决consle输出乱码
     language messages zh_CN.utf-8
+	set gfn=Courier\ New:h14
 endif
  
 " -----------------------------------------------------------------------------
