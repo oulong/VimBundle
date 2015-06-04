@@ -157,6 +157,10 @@ Plugin 'taglist.vim'
 Plugin 'TxtBrowser'
 Plugin 'ZoomWin'
 
+" 安装lua插件
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-lua-ftplugin'
+
 call vundle#end()
 
  
@@ -881,6 +885,13 @@ if has("cscope")
     nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
+
+" -----------------------------------------------------------------------------
+"  <Lua 配置>
+" -----------------------------------------------------------------------------
+let g:lua_compiler_name = '/usr/bin/luac'
+let b:lua_compiler_name = '/usr/local/bin/lualint'
+let g:lua_complete_omni=1
  
 " -----------------------------------------------------------------------------
 "  < ctags 工具配置 >
